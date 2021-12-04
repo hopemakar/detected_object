@@ -375,6 +375,7 @@ def render_bounding_boxes(boxes, scores, classes, input_file_names, output_file_
 				name = os.path.basename(input_file_name)
 				output_file_name = os.path.join(os.getcwd(), "detected" , name_of_dir, name)
 		except Exception as ex:
+			output_file_name = os.path.join(os.getcwd(), "detected/empty", name)
 			log_file.write(str(ex))
 		
 		categories.append(class_cat)
